@@ -17,36 +17,39 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
     let dipslayedPrice = promoPrice ?? price
 
     return (
-        <div className="productCard">
+        <div className="productCardResponsive">
             <div className="productCardHeader">
                 <p className="productCardHeader_title">{title}</p>
                 <p className="productCardHeader_offer">{offer}</p>
                 <p className="productCardHeader_conscat">{conscat}</p>
             </div>
             <Image src={image}
-                   width={400}
-                   height={560}
+                   width={305}
+                   height={300}
                    className="productCard_image"
                    alt="Image de skieur"
             />
+            <div className="productCardBuyButton">
+                <div className="productCardBuyButton_cart">
+                    <span className="icon"></span>
+                </div>
+                <span>Acheter</span>
+            </div>
 
-            <div className="productCardFooter">
-                <div className="productCardFooter_description">
+
+            <div className="productCardFooterResponsive">
+                <div className="productCardFooterResponsive_description">
                     {description}
                 </div>
-                <span className="productCardFooter_separator"/>
-                <div className="productCardFooter_price">
-                    <div>
-                        <span
-                            className="productCardFooter_stockPrice">{remise ? remise + "% de remise" : convertCentimesToEuros(dipslayedPrice) + "€"}
-                        </span>
-                        <span className="productCardFooter_promoPrice">
+                <span className="productCardFooterResponsive_separator"/>
+                <div className="productCardFooterResponsive_price">
+                    <span
+                        className="productCardFooterResponsive_stockPrice">{remise ? remise + "% de remise" : convertCentimesToEuros(dipslayedPrice) + "€"}
+                    </span>
+                    <span className="productCardFooterResponsive_promoPrice">
                             {promoPrice ? convertCentimesToEuros(price) + "€" : ""}
-                        </span>
-                    </div>
-                    <div className="productCardFooter_cart">
-                        <span className="icon"></span>
-                    </div>
+                    </span>
+
                 </div>
             </div>
 

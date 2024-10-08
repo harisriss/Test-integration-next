@@ -2,7 +2,7 @@ import {FC} from "react";
 
 export interface ButtonProps {
     buttonName?: string;
-    iconName: string;
+    iconName?: string;
 }
 
 const Button: FC<ButtonProps> = ({buttonName, iconName}) => {

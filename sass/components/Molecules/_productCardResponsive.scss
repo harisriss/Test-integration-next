@@ -1,25 +1,21 @@
-.productCard {
-  max-width: 400px;
+.productCardResponsive {
+  max-width: 305px;
   position: relative;
   font-family: $font-Montserrat;
   box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
 
   &_image {
     object-fit: cover;
-    max-height: 396px;
   }
 }
 
-.productCardHeader {
+.productCardHeaderResponsive {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   padding: 19px 16px;
-  height: 100%;
-  max-height: 110px;
+  height: auto;
+  max-height: 90px;
   width: 100%;
   font-family: $font-Montserrat;
   color: $color-white;
@@ -28,26 +24,41 @@
     font-family: $font-Teko;
 
   }
-  &_offer {
-    font-size: 22px;
-  }
-  &_conscat {
-    font-size: 16px;
+}
 
+.productCardBuyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  background: red;
+  color: $color-white;
+
+  &_cart {
+    .icon {
+      &::before {
+        @include fontIcon();
+        content: "\e90f";
+        color: $color-white;
+        font-size: 20px;
+      }
+    }
   }
 }
 
-.productCardFooter {
+.productCardFooterResponsive {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 164px;
+  height: 180px;
   background: $color-white;
-  padding: 19px 15px 11px;
+  padding: 12px 24px 11px;
   line-height: 1.625rem;
 
   &_description {
     min-height: 78px;
+    font-size: 16px;
   }
 
   &_separator {
@@ -61,32 +72,35 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &_stockPrice {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
-    margin-right: 1rem;
   }
 
   &_promoPrice {
+    font-size: 18px;
     text-decoration: line-through;
   }
 
-  &_cart {
-    .icon {
-      &::before {
-        @include fontIcon();
-        content: "\e90f";
-        color: $color-orange;
-        font-size: 20px;
-      }
-    }
+}
+
+@media screen and (min-width: $screen-s) {
+  .productCardResponsive {
+    display: none;
   }
 }
-  @media screen and (max-width: $screen-s) {
-    .productCard {
-      display: none;
+
+@media screen and (max-width: $screen-xs) {
+  .productCardResponsive {
+    max-width: 253px !important;
+
+    &_image {
+      width: 253px;
     }
   }
-
-
+  .productCardBuyButton {
+    background: blue;
+  }
+}
 
