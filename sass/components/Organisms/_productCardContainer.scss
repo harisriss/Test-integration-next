@@ -1,12 +1,11 @@
 .productCardContainer {
   display: flex;
-
   gap: 20px;
+  overflow: scroll;
 }
 
 .productCardContainerResponsive {
   display: flex;
   gap: 20px;
   overflow: scroll;
-
 }

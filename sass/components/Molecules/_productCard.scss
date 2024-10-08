@@ -28,9 +28,11 @@
     font-family: $font-Teko;
 
   }
+
   &_offer {
     font-size: 22px;
   }
+
   &_conscat {
     font-size: 16px;
 
@@ -61,6 +63,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &_stockPrice {
     font-size: 24px;
     font-weight: 700;
@@ -72,6 +75,8 @@
   }
 
   &_cart {
+    cursor: pointer;
+
     .icon {
       &::before {
         @include fontIcon();
@@ -82,11 +87,22 @@
     }
   }
 }
-  @media screen and (max-width: $screen-s) {
-    .productCard {
-      display: none;
+
+@media screen and (max-width: $screen-s) {
+  .productCard {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .productCard {
+    &_image {
+      object-fit: cover;
+      max-width: 253px;
     }
   }
+
+}
 
 
 

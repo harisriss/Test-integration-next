@@ -34,6 +34,7 @@
   padding: 10px 0;
   background: red;
   color: $color-white;
+  cursor: pointer;
 
   &_cart {
     .icon {
@@ -100,7 +101,7 @@
     }
   }
   .productCardBuyButton {
-    background: blue;
+    background: $color-orange;
   }
 }
 

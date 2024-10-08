@@ -44,7 +44,7 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
                             {promoPrice ? convertCentimesToEuros(price) + "€" : ""}
                         </span>
                     </div>
-                    <div className="productCardFooter_cart">
+                    <div className="productCardFooter_cart" onClick={()=> {alert("Ajouté au panier avec succes")}}>
                         <span className="icon"></span>
                     </div>
                 </div>
