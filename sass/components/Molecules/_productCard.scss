@@ -1,0 +1,78 @@
+.productCard {
+  max-width: 400px;
+  position: relative;
+  font-family: $font-Montserrat;
+  box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
+
+  &_image {
+    object-fit: cover;
+    max-height: 396px;
+  }
+}
+
+.productCardHeader {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 19px 16px;
+  height: 100%;
+  max-height: 110px;
+  width: 100%;
+  font-family: $font-Montserrat;
+  color: $color-white;
+
+  &_title {
+    font-family: $font-Teko;
+
+  }
+}
+
+.productCardFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 164px;
+  background: $color-white;
+  padding: 19px 15px 11px;
+  line-height: 1.625rem;
+
+  &_description {
+    min-height: 78px;
+  }
+
+  &_separator {
+    width: 100%;
+    border-top: 1px solid $color-grey-background;
+    //border-top: 1px solid red;
+  }
+
+  &_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_stockPrice {
+    font-size: 24px;
+    font-weight: 700;
+    margin-right: 1rem;
+  }
+
+  &_promoPrice {
+    text-decoration: line-through;
+  }
+
+  &_cart {
+    .icon {
+      &::before {
+        @include fontIcon();
+        content: "\e90f";
+        color: $color-orange;
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
+
+

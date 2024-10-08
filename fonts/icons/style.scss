@@ -1,0 +1,171 @@
+@import 'variables';
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yf6pny')
+      format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yf6pny')
+      format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yf6pny##{$icomoon-font-family}')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='site-'],
+[class*=' site-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.site-telepherique {
+  &:before {
+    content: $site-telepherique;
+  }
+}
+.site-warning {
+  &:before {
+    content: $site-warning;
+  }
+}
+.site-star {
+  &:before {
+    content: $site-star;
+  }
+}
+.site-snow {
+  &:before {
+    content: $site-snow;
+  }
+}
+.site-beginer {
+  &:before {
+    content: $site-beginer;
+  }
+}
+.site-line_arrow {
+  &:before {
+    content: $site-line_arrow;
+  }
+}
+.site-family {
+  &:before {
+    content: $site-family;
+  }
+}
+.site-persone {
+  &:before {
+    content: $site-persone;
+  }
+}
+.site-flash {
+  &:before {
+    content: $site-flash;
+  }
+}
+.site-plain {
+  &:before {
+    content: $site-plain;
+  }
+}
+.site-train {
+  &:before {
+    content: $site-train;
+  }
+}
+.site-car {
+  &:before {
+    content: $site-car;
+  }
+}
+.site-calendar {
+  &:before {
+    content: $site-calendar;
+  }
+}
+.site-menu {
+  &:before {
+    content: $site-menu;
+  }
+}
+.site-cross {
+  &:before {
+    content: $site-cross;
+  }
+}
+.site-cart {
+  &:before {
+    content: $site-cart;
+  }
+}
+.site-user {
+  &:before {
+    content: $site-user;
+  }
+}
+.site-help {
+  &:before {
+    content: $site-help;
+  }
+}
+.site-exchange {
+  &:before {
+    content: $site-exchange;
+  }
+}
+.site-ticket {
+  &:before {
+    content: $site-ticket;
+  }
+}
+.site-chevrron {
+  &:before {
+    content: $site-chevrron;
+  }
+}
+.site-chevrron-light {
+  &:before {
+    content: $site-chevrron-light;
+  }
+}
+.site-arrow {
+  &:before {
+    content: $site-arrow;
+  }
+}
+.site-facebook {
+  &:before {
+    content: $site-facebook;
+  }
+}
+.site-Instagram {
+  &:before {
+    content: $site-Instagram;
+  }
+}
+.site-LinkedIn {
+  &:before {
+    content: $site-LinkedIn;
+  }
+}
+.site-YouTube {
+  &:before {
+    content: $site-YouTube;
+  }
+}
+.site-Twitter {
+  &:before {
+    content: $site-Twitter;
+  }
+}
