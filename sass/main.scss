@@ -28,11 +28,14 @@
 @import 'components/Molecules/footerLinkList';
 @import 'components/Molecules/productCard';
 @import 'components/Molecules/productCardResponsive';
+@import 'components/Molecules/offerCard';
+
 
 // - Organisms
 @import 'components/Organisms/footerLinks';
 @import 'components/Organisms/footerFooter';
 @import 'components/Organisms/productCardContainer';
+@import 'components/Organisms/offerContainer';
 
 // - Template
 @import 'components/Template/blockHeader';

@@ -1,11 +1,27 @@
 .productCardContainer {
   display: flex;
   gap: 20px;
-  overflow: scroll;
+  width: 100%;
+}
+
+.react-multi-carousel-list {
+
+  .react-multi-carousel-track {
+
+    .react-multi-carousel-item {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 .productCardContainerResponsive {
   display: flex;
   gap: 20px;
-  overflow: scroll;
+}
+
+@media screen and (max-width: $screen-s -1) {
+  .productCardContainerResponsive {
+    //display: none;
+  }
 }

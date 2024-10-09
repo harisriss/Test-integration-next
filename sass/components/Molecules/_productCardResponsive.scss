@@ -19,9 +19,13 @@
   width: 100%;
   font-family: $font-Montserrat;
   color: $color-white;
-
   &_title {
     font-family: $font-Teko;
+    font-size: $fs_500;
+
+  }
+  &_conscat {
+    font-size: $fs_300;
 
   }
 }
@@ -32,7 +36,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 0;
-  background: red;
+  background: $color-orange;
   color: $color-white;
   cursor: pointer;
 
@@ -42,7 +46,7 @@
         @include fontIcon();
         content: "\e90f";
         color: $color-white;
-        font-size: 20px;
+        font-size: $fs_500;
       }
     }
   }
@@ -57,9 +61,10 @@
   padding: 12px 24px 11px;
   line-height: 1.625rem;
 
+
   &_description {
     min-height: 78px;
-    font-size: 16px;
+    font-size: $fs_400;
   }
 
   &_separator {
@@ -75,24 +80,39 @@
   }
 
   &_stockPrice {
-    font-size: 20px;
+    font-size: $fs_500;
     font-weight: 700;
   }
 
   &_promoPrice {
-    font-size: 18px;
+    font-size: $fs_450;
     text-decoration: line-through;
   }
 
 }
 
-@media screen and (min-width: $screen-s) {
+@media screen and (min-width: $screen-s + 1) {
   .productCardResponsive {
     display: none;
   }
 }
 
 @media screen and (max-width: $screen-xs) {
+  .productCardHeaderResponsive{
+    &_title {
+      font-family: $font-Teko;
+
+    }
+
+    &_offer {
+      font-size: $fs_400;
+    }
+
+    &_conscat {
+      font-size: $fs_300;
+
+    }
+  }
   .productCardResponsive {
     max-width: 253px !important;
 
