@@ -107,12 +107,16 @@
   }
 
 }
+/**
+ * @todo
+ * A VERIFIER SI C'EST UTILE
+ */
 
-@media screen and (max-width: $screen-s) {
-  .productCard {
-    display: none;
-  }
-}
+//@media screen and (max-width: $screen-s) {
+//  .productCard {
+//    //display: none;
+//  }
+//}
 
 
 @media screen and (max-width: $screen-m) {

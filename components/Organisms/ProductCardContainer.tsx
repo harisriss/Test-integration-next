@@ -26,7 +26,7 @@ const ProductCardContainer: FC<ProductCardContainerProps> = () => {
 
     return (
         <>
-            <div className="productCardContainer">
+        {!isResponsive &&<div className="productCardContainer">
                 {data.map((product, key) => {
                     return <ProductCard
                         key={key}
@@ -41,9 +41,8 @@ const ProductCardContainer: FC<ProductCardContainerProps> = () => {
                     />
                 })}
 
-            </div>
+            </div>}
 
-            {/*** Responsive view ***/}
 
             {isResponsive && <Carousel responsive={responsive} className="productCardContainerResponsive">
                 {data.map((product, key) => {
