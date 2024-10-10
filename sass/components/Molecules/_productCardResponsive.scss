@@ -1,9 +1,19 @@
 .productCardResponsive {
-  max-width: 305px;
+  max-width: 300px !important;
   position: relative;
   font-family: $font-Montserrat;
   box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
 
+    &_image {
+      position: static !important;
+      height: 305px !important;
+      object-fit: cover;
+    }
+
+  .imageContainer {
+    position: relative;
+    max-height: 305px;
+  }
   &_image {
     object-fit: cover;
   }
@@ -70,7 +80,6 @@
   &_separator {
     width: 100%;
     border-top: 1px solid $color-grey-background;
-    //border-top: 1px solid red;
   }
 
   &_price {
@@ -117,11 +126,22 @@
     max-width: 253px !important;
 
     &_image {
-      width: 253px;
-    }
+      position: static !important;
+      height: 305px !important;
+      object-fit: cover;    }
+  }
+  .imageContainer {
+    position: relative;
+    max-height: 305px;
   }
   .productCardBuyButton {
     background: $color-orange;
+  }
+  .productCardFooterResponsive {
+    padding: 12px 20px 11px;
+
+
+
   }
 }
 

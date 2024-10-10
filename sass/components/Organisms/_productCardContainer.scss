@@ -5,6 +5,7 @@
 }
 
 .react-multi-carousel-list {
+  padding-bottom: 20px;
 
   .react-multi-carousel-track {
 
@@ -15,13 +16,8 @@
   }
 }
 
-.productCardContainerResponsive {
-  display: flex;
-  gap: 20px;
-}
-
-@media screen and (max-width: $screen-s -1) {
+@media screen and (min-width: 768px) {
   .productCardContainerResponsive {
-    //display: none;
+    display: none;
   }
 }

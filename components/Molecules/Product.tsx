@@ -23,31 +23,40 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
                 <p className="productCardHeader_offer">{offer}</p>
                 <p className="productCardHeader_conscat">{conscat}</p>
             </div>
-            <Image src={image}
-                   width={400}
-                   height={560}
-                   className="productCard_image"
-                   alt="Image de skieur"
-            />
+
+            <div className="imageContainer">
+                <Image
+                    src={image}
+                    fill
+                    className="productCard_image"
+                    alt="Image de skieur"
+                />
+            </div>
 
             <div className="productCardFooter">
                 <div className="productCardFooter_description">
                     {description}
                 </div>
-                <span className="productCardFooter_separator"/>
-                <div className="productCardFooter_price">
-                    <div>
+                <div className="productCardFooter_separatorDiv">
+
+                    <span className="productCardFooter_separator"/>
+                    <div className="productCardFooter_price">
+                        <div>
                         <span
                             className="productCardFooter_stockPrice">{remise ? remise + "% de remise" : convertCentimesToEuros(dipslayedPrice) + "€"}
                         </span>
-                        <span className="productCardFooter_promoPrice">
+                            <span className="productCardFooter_promoPrice">
                             {promoPrice ? convertCentimesToEuros(price) + "€" : ""}
                         </span>
-                    </div>
-                    <div className="productCardFooter_cart" onClick={()=> {alert("Ajouté au panier avec succes")}}>
-                        <span className="icon"></span>
+                        </div>
+                        <div className="productCardFooter_cart" onClick={() => {
+                            alert("Ajouté au panier avec succes")
+                        }}>
+                            <span className="icon"></span>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
         </div>

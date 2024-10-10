@@ -18,18 +18,17 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
 
     return (
         <div className="productCardResponsive">
-            <div className="productCardHeader">
-                <p className="productCardHeader_title">{title}</p>
-                <p className="productCardHeader_offer">{offer}</p>
-                <p className="productCardHeader_conscat">{conscat}</p>
+            <div className="productCardHeaderResponsive">
+                <p className="productCardHeaderResponsive_title">{title}</p>
+                <p className="productCardHeaderResponsive_offer">{offer}</p>
+                <p className="productCardHeaderResponsive_conscat">{conscat}</p>
             </div>
             <Image src={image}
-                   width={305}
-                   height={300}
-                   className="productCard_image"
+                   fill
+                   className="productCardResponsive_image"
                    alt="Image de skieur"
             />
-            <div className="productCardBuyButton">
+            <div className="productCardBuyButton" onClick={()=> {alert("Ajouté au panier avec succes")}}>
                 <div className="productCardBuyButton_cart">
                     <span className="icon"></span>
                 </div>
