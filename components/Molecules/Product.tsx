@@ -29,7 +29,7 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
                     src={image}
                     fill
                     className="productCard_image"
-                    alt="Image de skieur"
+                    alt="Image du produit"
                 />
             </div>
 

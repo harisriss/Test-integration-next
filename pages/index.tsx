@@ -3,16 +3,13 @@ import React from "react";
 import ProductCardContainer from "~organisms/ProductCardContainer";
 import OffersContainer from "~organisms/OffersContainer";
 
-interface HomePageProps {
-}
 
-
-const HomePage = (props: HomePageProps) => {
+const HomePage = () => {
 
     return (
         <Layout>
            <ProductCardContainer/>
-            {/*<OffersContainer/>*/}
+            <OffersContainer/>
         </Layout>
     );
 }

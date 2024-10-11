@@ -1,0 +1,199 @@
+.OfferDetailsContainerMobile {
+
+  &_right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: flex-end;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      width: 110%;
+      height: 255%;
+      transform: skewY(20deg);
+      background: $color-grey-background;
+      z-index: -1;
+      margin: 0 -15px;
+    }
+  }
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 190px 0;
+
+
+  }
+
+  &_subtitle {
+    font-family: $font-Montserrat;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: $fs_400;
+    color: $color-blue
+  }
+
+  &_remise {
+    font-family: $font-Montserrat;
+    background: $color-blue;
+    font-size: $fs_400;
+    font-weight: 700;
+    line-height: 22px;
+    color: $color-white;
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+
+  &_title {
+    text-transform: uppercase;
+    font-family: $font-Eagle;
+    font-size: $fs_625;
+    line-height: 35px;
+    font-weight: 700;
+    margin-top: 30px;
+    width: fit-content;
+
+    &_right {
+      text-transform: uppercase;
+      font-family: $font-Eagle;
+      font-size: $fs_625;
+      line-height: 35px;
+      font-weight: 700;
+      margin-top: 30px;
+      width: fit-content;
+      text-align: right;
+    }
+  }
+
+
+  &_description {
+    font-family: $font-Montserrat;
+    font-weight: 400;
+    font-size: $fs_400;
+    line-height: 32px;
+    margin-top: 20px;
+
+    &_right {
+      font-family: $font-Montserrat;
+      font-weight: 400;
+      font-size: $fs_400;
+      line-height: 32px;
+      margin-top: 20px;
+      text-align: right;
+    }
+  }
+}
+
+.OfferDetailsOverviewMobile {
+
+  &_see {
+    all: unset;
+    color: $color-white;
+    background: $color-orange;
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 25px;
+  }
+
+  &_all {
+    all: unset;
+    justify-content: flex-end;
+    color: $color-black;
+    border: 1px solid $color-black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 25px;
+  }
+
+  &_right {
+    font-family: $font-Montserrat;
+    font-weight: 700;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+
+  }
+
+  &_left {
+    display: flex;
+    font-family: $font-Montserrat;
+    font-weight: 700;
+    margin-top: 20px;
+    justify-content: flex-start;
+
+  }
+
+  &_rightImage {
+    border-radius: 270px 0 0 270px;
+    height: 209px;
+    width: 100%;
+    margin-right: -15px;
+    margin-top: 10px;
+    object-fit: cover;
+  }
+
+  &_leftImage {
+    border-radius: 0 270px 270px 0;
+    height: 209px;
+    width: 100%;
+    margin-left: -15px;
+    margin-top: 10px;
+    object-fit: cover;
+  }
+}
+
+.OfferDetailsContainerMobile {
+  max-width: 360px;
+
+  &_rightImage {
+    border-radius: 270px 0 0 270px;
+    max-height: 209px;
+    width: 100%;
+    margin-right: -15px;
+    margin-top: 10px;
+    object-fit: cover;
+    object-position: 75% 75%;
+
+  }
+
+  &_leftImage {
+    border-radius: 0 270px 270px 0;
+    max-height: 209px;
+    width: 100%;
+    margin-left: -15px;
+    margin-top: 10px;
+    object-fit: cover;
+  }
+}
+
+.OfferDetailsOverviewMobile {
+  &_right, &_left {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+  .OfferDetailsOverviewMobile {
+    &_right, &_left {
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 340px) {
+  .OfferDetailsOverviewMobile {
+    &_right, &_left {
+      font-size: 12px;
+    }
+  }
+}
+
+
+///

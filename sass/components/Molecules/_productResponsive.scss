@@ -101,9 +101,9 @@
 }
 
 @media screen and (min-width: $screen-s + 1) {
-  .productCardResponsive {
-    display: none;
-  }
+  //.productCardResponsive {
+  //  display: none;
+  //}
 }
 
 @media screen and (max-width: $screen-xs) {

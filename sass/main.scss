@@ -26,15 +26,16 @@
 @import 'components/Molecules/footerDomaine';
 @import 'components/Molecules/footerPayment';
 @import 'components/Molecules/footerLinkList';
-@import 'components/Molecules/productCard';
-@import 'components/Molecules/productCardResponsive';
-@import 'components/Molecules/offerCard';
+@import 'components/Molecules/product';
+@import 'components/Molecules/productResponsive';
+@import 'components/Molecules/offer';
+@import 'components/Molecules/offerMobile';
 
 
 // - Organisms
 @import 'components/Organisms/footerLinks';
 @import 'components/Organisms/footerFooter';
-@import 'components/Organisms/productCardContainer';
+@import 'components/Organisms/productContainer';
 @import 'components/Organisms/offerContainer';
 
 // - Template
