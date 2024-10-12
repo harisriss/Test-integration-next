@@ -55,9 +55,7 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

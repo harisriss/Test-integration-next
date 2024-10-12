@@ -34,7 +34,6 @@ const Offer = ({
                 <p className="OfferDetailsContainer_remise">{remise}</p>
                 <h2 className="OfferDetailsContainer_title">{title}</h2>
 
-
                 <p className={"OfferDetailsContainer_description"}>{description}</p>
 
                 <div className="OfferDetailsOverview">

@@ -6,7 +6,8 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {useMediaQuery} from "../../utils/functions";
 
-export interface ProductCardContainerProps {}
+export interface ProductCardContainerProps {
+}
 
 const ProductCardContainer: FC<ProductCardContainerProps> = () => {
 
@@ -26,7 +27,7 @@ const ProductCardContainer: FC<ProductCardContainerProps> = () => {
 
     return (
         <>
-        {!isResponsive &&<div className="productCardContainer">
+            {!isResponsive && <div className="productCardContainer">
                 {data.map((product, key) => {
                     return <ProductCard
                         key={key}
@@ -42,7 +43,6 @@ const ProductCardContainer: FC<ProductCardContainerProps> = () => {
                 })}
 
             </div>}
-
 
             {isResponsive && <Carousel responsive={responsive} className="productCardContainerResponsive">
                 {data.map((product, key) => {

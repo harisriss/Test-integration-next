@@ -47,7 +47,7 @@ const OffersContainer: FC<OffersContainer> = () => {
             }
 
             {isResponsive &&
-                <>
+                <div className="OfferContainer">
 
                     <OfferMobile
                         title="Promotions d’avant saison : forfait saison"
@@ -75,8 +75,7 @@ const OffersContainer: FC<OffersContainer> = () => {
                         ButtonLabelAll="Toutes nos promos"
                     />
 
-                </>
-
+                </div>
             }
         </>
 

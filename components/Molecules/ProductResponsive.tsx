@@ -26,31 +26,30 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
             </div>
             <img src={image}
 
-                   className="productCardResponsive_image"
-                   alt="Image de skieur"
+                 className="productCardResponsive_image"
+                 alt="Image de skieur"
             />
 
-
             <SquareButton label="Acheter" alertText="Ajouté au panier avec succes"/>
-
-
 
             <div className="productCardFooterResponsive">
                 <div className="productCardFooterResponsive_description">
                     {description}
                 </div>
-                <span className="productCardFooterResponsive_separator"/>
-                <div className="productCardFooterResponsive_price">
+                <div className="productCardFooterResponsive_priceContainer">
+
+                    <span className="productCardFooterResponsive_separator"/>
+                    <div className="productCardFooterResponsive_price">
                     <span
                         className="productCardFooterResponsive_stockPrice">{remise ? remise + "% de remise" : convertCentimesToEuros(dipslayedPrice) + "€"}
                     </span>
-                    <span className="productCardFooterResponsive_promoPrice">
+                        <span className="productCardFooterResponsive_promoPrice">
                             {promoPrice ? convertCentimesToEuros(price) + "€" : ""}
                     </span>
 
+                    </div>
                 </div>
             </div>
-
         </div>
     );
 };
