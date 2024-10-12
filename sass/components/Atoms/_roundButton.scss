@@ -1,0 +1,45 @@
+.roundButton {
+  font-family: $font-Montserrat;
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+  text-wrap: nowrap;
+  overflow: visible;
+  font-size: $fs_450;
+
+  &_see {
+    all: unset;
+    color: $color-white;
+    background: $color-orange;
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 25px;
+    font-size: $fs_450;
+    font-weight: 700;
+  }
+
+  &_all {
+    all: unset;
+    justify-content: flex-end;
+    color: $color-black;
+    border: 1px solid $color-black;
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 25px;
+    font-weight: 700;
+
+  }
+}
+
+
+@media screen and (max-width: $screen-xs) {
+  .roundButton {
+    font-size: $fs_400;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .roundButton {
+    font-size: $fs_300;
+  }
+}

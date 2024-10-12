@@ -1,5 +1,6 @@
-import Image from "next/image";
 import {convertCentimesToEuros} from "../../utils/functions";
+import React from "react";
+import SquareButton from "~atoms/SquareButton";
 
 
 export interface ProductCardProps {
@@ -23,17 +24,15 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
                 <p className="productCardHeaderResponsive_offer">{offer}</p>
                 <p className="productCardHeaderResponsive_conscat">{conscat}</p>
             </div>
-            <Image src={image}
-                   fill
+            <img src={image}
+
                    className="productCardResponsive_image"
                    alt="Image de skieur"
             />
-            <div className="productCardBuyButton" onClick={()=> {alert("Ajouté au panier avec succes")}}>
-                <div className="productCardBuyButton_cart">
-                    <span className="icon"></span>
-                </div>
-                <span>Acheter</span>
-            </div>
+
+
+            <SquareButton label="Acheter" alertText="Ajouté au panier avec succes"/>
+
 
 
             <div className="productCardFooterResponsive">

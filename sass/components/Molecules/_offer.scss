@@ -1,29 +1,9 @@
-.OfferContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 150px;
-  align-items: center;
-  margin-bottom: 170px;
-
-  &:before {
-    content: "";
-    width: 100%;
-    height: 135%;
-    transform: skewY(5deg);
-
-    background: $color-grey-background;
-    z-index: -1;
-    position: absolute;
-  }
-}
-
 .OfferDetailsContainer {
   display: flex;
-  justify-content: center;
-  gap: 100px;
   font-family: $font-Montserrat;
   max-width: 1240px;
   width: 100%;
+  position: relative;
 
   &_details {
     max-width: 485px;
@@ -33,14 +13,15 @@
     text-transform: uppercase;
     font-weight: 800;
     font-size: $fs_400;
+    line-height: 20px;
     color: $color-blue
   }
 
   &_remise {
     background: $color-blue;
-    font-size: $fs_400;
+    font-size: $fs_500;
     font-weight: 700;
-    line-height: 22px;
+    line-height: 32px;
     color: $color-white;
     width: fit-content;
     padding: 10px 20px;
@@ -50,8 +31,8 @@
   &_title {
     text-transform: uppercase;
     font-family: $font-Eagle;
-    font-size: $fs_625;
-    line-height: 35px;
+    font-size: $fs_xxl;
+    line-height: 45px;
     font-weight: 700;
     margin-top: 30px;
   }
@@ -59,99 +40,127 @@
 
   &_description {
     font-weight: 400;
-    font-size: $fs_400;
-    line-height: 26px;
+    font-size: $fs_550;
+    line-height: 32px;
     margin-top: 20px;
-    max-width: 347px;
+    max-width: 485px;
 
   }
 
   &_image {
+    position: absolute;
+    right: 0;
     border-radius: 270px 0 0 270px;
-    height: 350px;
-    max-width: 50%;
-    width: 100%;
-    margin-right: -15px;
+    height: 540px;
+    width: 50%;
     margin-top: 70px;
     object-fit: cover;
     object-position: 75% 75%;
   }
 
   &_imageReverse {
+    position: absolute;
+    left: 0;
     border-radius: 0 270px 270px 0;
-    height: 350px;
-    max-width: 50%;
-    width: 100%;
-    margin-left: -15px;
+    height: 540px;
+    width: 50%;
     margin-top: -50px;
     object-fit: cover;
     object-position: 75% 75%;
   }
 
-
-}
-
-
-@media screen and (min-width: $screen-m) {
-  .OfferContainer {
-
-    overflow: hidden;
+  .OfferDetailsOverview {
+    margin-top: 75px;
+    display: flex;
+    gap: 10px;
   }
-
 }
+
+
+/*******************/
+/** MEDIA QUERIES **/
+/*******************/
+
 
 @media screen and (max-width: $screen-m) {
-
-  .OfferDetailsContainer {
-    gap: 20px;
+  .OfferContainer {
+    gap: 150px;
   }
 
-}
+  .OfferDetailsContainer {
 
+    &_details {
+      max-width: 350px;
+    }
+
+    &_subtitle {
+      font-size: $fs_300;
+      line-height: 20px;
+    }
+
+    &_remise {
+      font-size: $fs_400;
+      line-height: 22px;
+    }
+
+    &_title {
+      font-size: $fs_625;
+      line-height: 35px;
+    }
+
+    &_description {
+      font-size: $fs_400;
+      line-height: 26px;
+    }
+
+    &_image {
+      right: 0;
+      height: 350px;
+      max-width: 50%;
+      width: 100%;
+
+    }
+
+    &_imageReverse {
+      left: 0;
+      height: 350px;
+      max-width: 50%;
+      width: 100%;
+
+    }
+
+  }
+}
 
 .rowReverse {
   flex-direction: row-reverse;
 }
 
 
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////
+@media screen and (min-width: 720px) and (max-width: $screen-m) {
+  .OfferDetailsContainer {
+    &_image {
+      right: -15px;
 
+    }
 
-.OfferDetailsOverview {
-  font-family: $font-Montserrat;
-  margin-top: 20px;
-  display: flex;
-  gap: 18px;
-  text-wrap: nowrap;
-  //flex-wrap: wrap;
-  overflow: visible;
-
-  &_see {
-    all: unset;
-    color: $color-white;
-    background: $color-orange;
-    padding: 10px 20px;
-    border-radius: 30px;
-    line-height: 25px;
-    font-size: $fs_450;
-    font-weight: 700;
+    &_imageReverse {
+      left: -15px;
+    }
   }
 
-  &_all {
-    all: unset;
-    justify-content: flex-end;
-    color: $color-black;
-    border: 1px solid $color-black;
-    padding: 10px 20px;
-    border-radius: 30px;
-    line-height: 25px;
-    font-weight: 700;
+}
 
+
+@media screen and (min-width: $screen-m - 1) and (max-width: 1440px) {
+  .OfferDetailsContainer {
+    &_image {
+      right: -100px;
+    }
+
+    &_imageReverse {
+      left: -100px;
+    }
   }
 
 }

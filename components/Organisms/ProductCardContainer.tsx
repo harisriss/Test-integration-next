@@ -16,7 +16,7 @@ const ProductCardContainer: FC<ProductCardContainerProps> = () => {
             items: 2
         },
         mobile: {
-            breakpoint: {max: 700, min: 0},
+            breakpoint: {max: 720, min: 0},
             items: 1,
         }
     };

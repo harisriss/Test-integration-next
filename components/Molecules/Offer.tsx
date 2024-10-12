@@ -1,3 +1,5 @@
+import RoundButton from "~atoms/RoundButton";
+
 export interface OfferProps {
     title: string,
     subtitle: string,
@@ -7,10 +9,23 @@ export interface OfferProps {
     seeOffer?: boolean
     allPromo?: boolean
     rowReverse: boolean
+    ButtonLabelSee: string
+    ButtonLabelAll: string
 }
 
 // const Menu = ({title, offer, conscat, image, description, price, promoPrice, remise}: MenuProps) => {
-const Offer = ({title, subtitle, image, description, remise, seeOffer, allPromo, rowReverse}: OfferProps) => {
+const Offer = ({
+                   title,
+                   subtitle,
+                   image,
+                   description,
+                   remise,
+                   seeOffer,
+                   allPromo,
+                   rowReverse,
+                   ButtonLabelSee,
+                   ButtonLabelAll
+               }: OfferProps) => {
 
     return (
         <div className={rowReverse ? "rowReverse OfferDetailsContainer" : "OfferDetailsContainer"}>
@@ -23,12 +38,10 @@ const Offer = ({title, subtitle, image, description, remise, seeOffer, allPromo,
                 <p className={"OfferDetailsContainer_description"}>{description}</p>
 
                 <div className="OfferDetailsOverview">
-                    {seeOffer && <button className="OfferDetailsOverview_see" onClick={() => {
-                        alert("Voici l'offre !")
-                    }}>Voir l'offre</button>}
-                    {allPromo && <button className="OfferDetailsOverview_all" onClick={() => {
-                        alert("Voici les promos !")
-                    }}>Toutes nos promos</button>}
+                    {seeOffer && <RoundButton label={ButtonLabelSee} alertText="Voici l'offre !" classNameLabel="see"/>}
+                    {allPromo &&
+                        <RoundButton label={ButtonLabelAll} alertText="Voici les promos !" classNameLabel="all"/>}
+
                 </div>
             </div>
 

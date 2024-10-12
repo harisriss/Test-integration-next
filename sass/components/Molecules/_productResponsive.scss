@@ -3,9 +3,9 @@
   position: relative;
   font-family: $font-Montserrat;
   box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
-  margin-bottom: 100px;
+
     &_image {
-      position: static !important;
+      width: 100%;
       height: 305px !important;
       object-fit: cover;
     }
@@ -37,28 +37,6 @@
   &_conscat {
     font-size: $fs_300;
 
-  }
-}
-
-.productCardBuyButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  background: $color-orange;
-  color: $color-white;
-  cursor: pointer;
-
-  &_cart {
-    .icon {
-      &::before {
-        @include fontIcon();
-        content: "\e90f";
-        color: $color-white;
-        font-size: $fs_500;
-      }
-    }
   }
 }
 
@@ -100,11 +78,10 @@
 
 }
 
-@media screen and (min-width: $screen-s + 1) {
-  //.productCardResponsive {
-  //  display: none;
-  //}
-}
+
+/*******************/
+/** MEDIA QUERIES **/
+/*******************/
 
 @media screen and (max-width: $screen-xs) {
   .productCardHeaderResponsive{
@@ -126,7 +103,6 @@
     max-width: 253px !important;
 
     &_image {
-      position: static !important;
       height: 305px !important;
       object-fit: cover;    }
   }
@@ -134,9 +110,7 @@
     position: relative;
     max-height: 305px;
   }
-  .productCardBuyButton {
-    background: $color-orange;
-  }
+
   .productCardFooterResponsive {
     padding: 12px 20px 11px;
 

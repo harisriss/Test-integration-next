@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {convertCentimesToEuros} from "../../utils/functions";
 
 
@@ -25,9 +24,9 @@ const ProductCard = ({title, offer, conscat, image, description, price, promoPri
             </div>
 
             <div className="imageContainer">
-                <Image
+                <img
                     src={image}
-                    fill
+
                     className="productCard_image"
                     alt="Image du produit"
                 />

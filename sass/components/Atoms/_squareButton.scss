@@ -1,0 +1,29 @@
+.squareButton {
+  all: unset;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  background: $color-orange;
+  color: $color-white;
+  cursor: pointer;
+
+  &_cart {
+    .icon {
+      &::before {
+        @include fontIcon();
+        content: "\e90f";
+        color: $color-white;
+        font-size: $fs_500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xs) {
+  .squareButton {
+    background: $color-orange;
+  }
+}

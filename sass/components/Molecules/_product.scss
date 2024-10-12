@@ -3,6 +3,9 @@
   justify-content: center;
   gap: 20px;
   margin-bottom: 200px;
+  margin-top: -110px;
+  position: relative;
+  z-index: 3;
 }
 
 .productCard {
@@ -12,8 +15,8 @@
   box-shadow: 4px 4px 10px rgba(17, 17, 17, 0.1);
 
   &_image {
-    position: static !important;
     height: 385px !important;
+    width: 100%;
     object-fit: cover;
   }
 }
@@ -105,26 +108,6 @@
   }
 }
 
-@media screen and (max-width: $screen-xs) {
-  .productCard {
-    &_image {
-      //object-fit: cover;
-      //max-width: 253px;
-    }
-  }
-
-}
-/**
- * @todo
- * A VERIFIER SI C'EST UTILE
- */
-
-//@media screen and (max-width: $screen-s) {
-//  .productCard {
-//    //display: none;
-//  }
-//}
-
 
 @media screen and (max-width: $screen-m) {
   .productCardHeader {
@@ -179,6 +162,11 @@
 
 }
 
+
+/*******************/
+/** MEDIA QUERIES **/
+/*******************/
+
 @media screen and (max-width: $screen-l) {
   .productCardHeader {
     max-height: 120px;
@@ -190,8 +178,3 @@
     }
   }
 }
-
-
-
-
-

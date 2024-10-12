@@ -1,9 +1,23 @@
+.productCardContainerResponsive {
+  margin-top: -120px;
+  z-index: 3;
+}
+
 .react-multi-carousel-list {
   .react-multi-carousel-track {
     .react-multi-carousel-item {
       display: flex;
       justify-content: center;
+      margin-bottom: 100px;
     }
   }
 }
 
+
+@media screen and (max-width: $screen-xs) {
+  .productCardContainerResponsive {
+    margin-top: -240px;
+    z-index: 3;
+  }
+
+}
