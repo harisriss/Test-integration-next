@@ -6,15 +6,11 @@
     align-items: flex-end;
     flex-direction: column;
     margin-top: 20px;
-
-
   }
 
   &_left {
     display: flex;
     flex-direction: column;
-
-
   }
 
   &_subtitle {
@@ -78,8 +74,6 @@
 }
 
 .OfferDetailsOverviewMobile {
-
-
   &_right {
     font-family: $font-Montserrat;
     font-weight: 700;
@@ -160,7 +154,6 @@
     }
 
     .OfferDetailsContainerMobile {
-
       &_right {
         position: relative;
         display: flex;
